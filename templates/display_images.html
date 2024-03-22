@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Similar Images</title>
+    <style>
+        /* Add your CSS styling here */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-item {
+            margin: 10px;
+            text-align: center;
+        }
+        .image-item img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .image-description {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Original Image</h1>
+    <div class="image-gallery">
+        <div class="image-item">
+            <img src="{{ uploaded_image_url }}" alt="Uploaded Image">
+        </div>
+    </div>
+    
+    <h2>Similar Images</h2>
+    <div class="image-gallery">
+        {% for image in similar_images %}
+        <div class="image-item">
+            <img src="{{ image.url }}" alt="Similar Image">
+            <div class="image-description">Product ID: {{ image.product_id }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

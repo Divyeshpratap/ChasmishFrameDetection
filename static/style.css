@@ -1,0 +1,14 @@
+body {
+    background: url('../static/chasMishBackground.png') no-repeat center center fixed;
+    background-size: cover;
+    /* Rest of your CSS */
+}
+.header img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* This will keep the aspect ratio of your logo */
+    margin: 10px 0; /* Adds space around the logo */
+}
+
+.header {
+    text-align: left; /* Aligns the logo to the left */
+}

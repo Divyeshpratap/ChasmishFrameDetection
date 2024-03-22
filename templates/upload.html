@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lenskart Similar Spectacles Portal</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='chasMishLogo.png') }}" alt="Chasmish Logo">
+    </div>
+    <div class="container">
+        <h1>Find Similar Spectacles that you always dreamt of!</h1>
+        <p>This project aims to find similar spectacles from a comprehensive collection of all spectacles from Lenskart Product Listings.</p>
+        <div class="info">
+            <h2>How It Works:</h2>
+            <p>To find a similar spectacle, please follow the steps below:</p>
+            <ol class="steps">
+                <li>Take a picture of the spectacle against a white background (if a photo is not already available), and then upload the picture in JPEG format by clicking on "Choose Image".</li>
+                <li>Click on the "Upload" button and wait for the process to complete.</li>
+                <li>The page will automatically redirect to a new page, where the list of 10 most similar spectacles will appear, along with their product IDs.</li>
+            </ol>
+        </div>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload" class="button">
+        </form>
+    </div>
+</body>
+</html>
